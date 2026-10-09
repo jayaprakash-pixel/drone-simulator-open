@@ -1,0 +1,325 @@
+{
+ "about": "World test set (owner decision 2026-10-08): a starting list, edit freely. Give a place either a 'query' (resolved with Nominatim and checked against Wikidata by scripts/world-places.mjs) or fixed 'lat'/'lon' with a 'why' (checked by reverse geocoding). The script fills in lat, lon and check; delete lat/lon to resolve a place again.",
+ "places": [
+  {
+   "name": "New York",
+   "category": "Dense city",
+   "query": "New York City",
+   "lat": 40.712728,
+   "lon": -74.006015,
+   "osm": "relation/175905 (boundary=administrative)",
+   "check": "Wikidata Q60 centre 0.01 km away"
+  },
+  {
+   "name": "London",
+   "category": "Dense city",
+   "query": "London, Greater London, England",
+   "lat": 51.515618,
+   "lon": -0.091998,
+   "osm": "relation/51800 (boundary=administrative)",
+   "check": "Wikidata Q23311 centre 0.07 km away"
+  },
+  {
+   "name": "Mumbai",
+   "category": "Dense city",
+   "query": "Mumbai, Maharashtra, India",
+   "lat": 19.054999,
+   "lon": 72.869203,
+   "osm": "node/16173235 (place=city)",
+   "check": "Wikidata Q1156 centre 2.48 km away - CHECK: over 2 km; the point lies in: L Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, India"
+  },
+  {
+   "name": "Lagos",
+   "category": "Dense city",
+   "query": "Lagos, Nigeria",
+   "lat": 6.455057,
+   "lon": 3.394179,
+   "osm": "node/27565124 (place=city)",
+   "check": "Wikidata Q8673 centre 0.13 km away"
+  },
+  {
+   "name": "Sao Paulo",
+   "category": "Dense city",
+   "query": "Sao Paulo, Brazil",
+   "lat": -23.550651,
+   "lon": -46.633382,
+   "osm": "relation/298285 (boundary=administrative)",
+   "check": "Wikidata Q174 centre 0.06 km away"
+  },
+  {
+   "name": "Jakarta",
+   "category": "Dense city",
+   "query": "Jakarta, Indonesia",
+   "lat": -6.175405,
+   "lon": 106.827168,
+   "osm": "relation/6362934 (boundary=administrative)",
+   "check": "Wikidata Q3630 centre 0.03 km away"
+  },
+  {
+   "name": "Cairo",
+   "category": "Dense city",
+   "query": "Cairo, Egypt",
+   "lat": 30.044388,
+   "lon": 31.235726,
+   "osm": "relation/5466227 (place=city)",
+   "check": "Wikidata Q85 centre 0.01 km away"
+  },
+  {
+   "name": "Bhawanipatna (your spot)",
+   "category": "Small town",
+   "lat": 19.906845,
+   "lon": 83.16979,
+   "why": "the owner's screenshot spot",
+   "check": "fixed point (the owner's screenshot spot); reverse geocode: Sadar, Kalahandi, Odisha, India"
+  },
+  {
+   "name": "Pushkar",
+   "category": "Small town",
+   "query": "Pushkar, Ajmer, Rajasthan, India",
+   "lat": 26.487647,
+   "lon": 74.557848,
+   "osm": "node/82799646 (place=town)",
+   "check": "Wikidata Q749170 centre 0.47 km away"
+  },
+  {
+   "name": "Sarlat-la-Caneda",
+   "category": "Small town",
+   "query": "Sarlat-la-Caneda, France",
+   "lat": 44.887943,
+   "lon": 1.216132,
+   "osm": "relation/1839460 (boundary=administrative)",
+   "check": "Wikidata Q6381 centre 0.23 km away"
+  },
+  {
+   "name": "Decorah (Iowa)",
+   "category": "Small town",
+   "query": "Decorah, Iowa, USA",
+   "lat": 43.304161,
+   "lon": -91.78591,
+   "osm": "relation/128921 (boundary=administrative)",
+   "check": "Wikidata Q1781710 centre 0.45 km away"
+  },
+  {
+   "name": "Narok (Kenya)",
+   "category": "Small town",
+   "query": "Narok, Kenya",
+   "lat": -1.088693,
+   "lon": 35.871492,
+   "osm": "node/44925462 (place=town)",
+   "check": "Wikidata Q998813 centre 0.80 km away"
+  },
+  {
+   "name": "Ninh Binh",
+   "category": "Small town",
+   "query": "Ninh Binh, Vietnam",
+   "lat": 20.242114,
+   "lon": 105.974621,
+   "osm": "node/936706346 (railway=station)",
+   "check": "Wikidata Q16877130 centre 0.03 km away"
+  },
+  {
+   "name": "Near Ludhiana (farmland)",
+   "category": "Farmland and delta",
+   "lat": 30.97,
+   "lon": 75.72,
+   "why": "open farmland north-west of Ludhiana city, Punjab",
+   "check": "fixed point (open farmland north-west of Ludhiana city, Punjab); reverse geocode: Ludhiana, Ludhiana (West) Tahsil, Ludhiana, Punjab, 141001, India"
+  },
+  {
+   "name": "Central Iowa (farmland)",
+   "category": "Farmland and delta",
+   "lat": 42.15,
+   "lon": -93.45,
+   "why": "row-crop farmland in Story County, Iowa, away from towns",
+   "check": "fixed point (row-crop farmland in Story County, Iowa, away from towns); reverse geocode: Warren Township, Story County, Iowa, United States"
+  },
+  {
+   "name": "Can Tho",
+   "category": "Farmland and delta",
+   "query": "Can Tho, Vietnam",
+   "lat": 10.036205,
+   "lon": 105.787266,
+   "osm": "relation/1874283 (boundary=administrative)",
+   "check": "Wikidata Q216075 centre 34.04 km away - CHECK: over 2 km; the point lies in: Phường Ninh Kiều, Cần Thơ, 94000, Vietnam"
+  },
+  {
+   "name": "Thar Desert (empty stretch)",
+   "category": "Desert",
+   "lat": 27,
+   "lon": 70.3,
+   "why": "the Phase 1 empty desert point",
+   "check": "fixed point (the Phase 1 empty desert point); reverse geocode: Jaisalmer Tehsil, Jaisalmer, Rajasthan, India"
+  },
+  {
+   "name": "Merzouga (Sahara)",
+   "category": "Desert",
+   "query": "Merzouga, Morocco",
+   "lat": 31.099917,
+   "lon": -4.014088,
+   "osm": "node/3901504169 (place=town)",
+   "check": "Wikidata Q1922278 centre 0.25 km away"
+  },
+  {
+   "name": "San Pedro de Atacama",
+   "category": "Desert",
+   "query": "San Pedro de Atacama, Chile",
+   "lat": -22.910832,
+   "lon": -68.200138,
+   "osm": "node/214212256 (place=town)",
+   "check": "Wikidata Q23660231 centre 0.65 km away"
+  },
+  {
+   "name": "Spiti Valley (Kaza)",
+   "category": "Mountains",
+   "query": "Kaza, Lahaul and Spiti, Himachal Pradesh, India",
+   "lat": 32.224384,
+   "lon": 78.072263,
+   "osm": "node/245773092 (place=town)",
+   "check": "Wikidata Q1013544 centre 0.15 km away"
+  },
+  {
+   "name": "Zermatt",
+   "category": "Mountains",
+   "query": "Zermatt, Switzerland",
+   "lat": 46.021208,
+   "lon": 7.749254,
+   "osm": "relation/1685406 (boundary=administrative)",
+   "check": "Wikidata Q27494 centre 0.32 km away"
+  },
+  {
+   "name": "Cusco",
+   "category": "Mountains",
+   "query": "Cusco, Peru",
+   "lat": -13.517089,
+   "lon": -71.978536,
+   "osm": "node/59115290 (place=city)",
+   "check": "Wikidata Q5582862 centre 0.02 km away"
+  },
+  {
+   "name": "Namche Bazaar",
+   "category": "Mountains",
+   "query": "Namche Bazaar, Nepal",
+   "lat": 27.804166,
+   "lon": 86.709796,
+   "osm": "node/274016404 (place=village)",
+   "check": "Wikidata Q376123 centre 0.04 km away"
+  },
+  {
+   "name": "Male (Maldives)",
+   "category": "Coast and islands",
+   "query": "Male, Maldives",
+   "lat": 4.177988,
+   "lon": 73.510739,
+   "osm": "relation/6599336 (boundary=administrative)",
+   "check": "Wikidata Q9347 centre 0.43 km away"
+  },
+  {
+   "name": "Honolulu",
+   "category": "Coast and islands",
+   "query": "Honolulu, Hawaii, USA",
+   "lat": 21.304547,
+   "lon": -157.855676,
+   "osm": "relation/119231 (place=city)",
+   "check": "Wikidata Q18094 centre 0.16 km away"
+  },
+  {
+   "name": "Fira (Santorini)",
+   "category": "Coast and islands",
+   "query": "Fira, Santorini, Greece",
+   "lat": 36.414923,
+   "lon": 25.432453,
+   "osm": "node/1842740533 (place=town)",
+   "check": "Wikidata Q617169 centre 0.57 km away"
+  },
+  {
+   "name": "Manaus",
+   "category": "Forest",
+   "query": "Manaus, Amazonas, Brazil",
+   "lat": -3.131633,
+   "lon": -59.982504,
+   "osm": "relation/332493 (boundary=administrative)",
+   "check": "Wikidata Q40236 centre 4.57 km away - CHECK: over 2 km; the point lies in: Distrito Industrial I, Manaus, Amazonas, North Region, 69000-000, Brazil"
+  },
+  {
+   "name": "Kuching",
+   "category": "Forest",
+   "query": "Kuching, Sarawak, Malaysia",
+   "lat": 1.559756,
+   "lon": 110.345397,
+   "osm": "node/4834272899 (place=city)",
+   "check": "Wikidata Q220445 centre 0.30 km away"
+  },
+  {
+   "name": "Tromso",
+   "category": "High latitude",
+   "query": "Tromso, Norway",
+   "lat": 69.651635,
+   "lon": 18.955859,
+   "osm": "relation/407754 (boundary=administrative)",
+   "check": "Wikidata Q26087 centre 0.23 km away"
+  },
+  {
+   "name": "Reykjavik",
+   "category": "High latitude",
+   "query": "Reykjavik, Iceland",
+   "lat": 64.145981,
+   "lon": -21.942237,
+   "osm": "relation/2580605 (boundary=administrative)",
+   "check": "Wikidata Q1764 centre 0.39 km away"
+  },
+  {
+   "name": "Sydney",
+   "category": "Oceania and other",
+   "query": "Sydney, New South Wales, Australia",
+   "lat": -33.869844,
+   "lon": 151.208285,
+   "osm": "relation/5750005 (place=city)",
+   "check": "Wikidata Q3130 centre 0.28 km away"
+  },
+  {
+   "name": "Auckland",
+   "category": "Oceania and other",
+   "query": "Auckland, New Zealand",
+   "lat": -36.852095,
+   "lon": 174.76318,
+   "osm": "node/292806332 (place=city)",
+   "check": "Wikidata Q37100 centre 0.38 km away"
+  },
+  {
+   "name": "Tokyo",
+   "category": "Oceania and other",
+   "query": "Tokyo, Japan",
+   "lat": 35.67686,
+   "lon": 139.763895,
+   "osm": "relation/1543125 (boundary=administrative)",
+   "check": "Wikidata Q1490 centre 6.67 km away - CHECK: over 2 km; the point lies in: Marunouchi 3, Marunouchi, Chiyoda, Tokyo, 100-0005, Japan"
+  },
+  {
+   "name": "Nairobi",
+   "category": "Oceania and other",
+   "query": "Nairobi, Kenya",
+   "lat": -1.289001,
+   "lon": 36.817281,
+   "osm": "relation/9185096 (place=city)",
+   "check": "Wikidata Q3870 centre 0.29 km away"
+  },
+  {
+   "name": "Lima",
+   "category": "Oceania and other",
+   "query": "Lima, Peru",
+   "lat": -12.045981,
+   "lon": -77.030591,
+   "osm": "node/4289361265 (place=city)",
+   "check": "Wikidata Q2868 centre 1.73 km away"
+  },
+  {
+   "name": "Istanbul",
+   "category": "Oceania and other",
+   "query": "Istanbul, Turkey",
+   "lat": 41.006381,
+   "lon": 28.975872,
+   "osm": "node/1882099475 (place=city)",
+   "check": "Wikidata Q406 centre 1.37 km away"
+  }
+ ]
+}

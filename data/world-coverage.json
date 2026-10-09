@@ -1,0 +1,832 @@
+{
+ "places": {
+  "New York|40.712728|-74.006015": {
+   "osm": {
+    "buildings": 652,
+    "tagged": 572,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 1049,
+    "any": 1377,
+    "capped": false
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 23,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 18,
+    "spacingM": 1,
+    "at": "2026-10-08"
+   }
+  },
+  "London|51.515618|-0.091998": {
+   "osm": {
+    "buildings": 776,
+    "tagged": 415,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 867,
+    "any": 1395,
+    "capped": false
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 19,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 17,
+    "spacingM": 2,
+    "at": "2026-10-08"
+   }
+  },
+  "Mumbai|19.054999|72.869203": {
+   "osm": {
+    "buildings": 147,
+    "tagged": 2,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 254,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 56,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Lagos|6.455057|3.394179": {
+   "osm": {
+    "buildings": 1694,
+    "tagged": 746,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 247,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 59,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Sao Paulo|-23.550651|-46.633382": {
+   "osm": {
+    "buildings": 1667,
+    "tagged": 1639,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 141,
+    "any": 1782,
+    "capped": false
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 27,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Jakarta|-6.175405|106.827168": {
+   "osm": {
+    "buildings": 76,
+    "tagged": 6,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 242,
+    "any": 669,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 59,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Cairo|30.044388|31.235726": {
+   "osm": {
+    "buildings": 376,
+    "tagged": 41,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 447,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 52,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Bhawanipatna (your spot)|19.906845|83.16979": {
+   "osm": {
+    "buildings": 9,
+    "tagged": 0,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 0,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 56,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Pushkar|26.487647|74.557848": {
+   "osm": {
+    "buildings": 841,
+    "tagged": 0,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 259,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 53,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Sarlat-la-Caneda|44.887943|1.216132": {
+   "osm": {
+    "buildings": 1882,
+    "tagged": 217,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 243,
+    "any": 444,
+    "capped": false
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 21,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Decorah (Iowa)|43.304161|-91.78591": {
+   "osm": {
+    "buildings": 75,
+    "tagged": 1,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 184,
+    "capped": false
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 22,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 16,
+    "spacingM": 5,
+    "at": "2026-10-08"
+   }
+  },
+  "Narok (Kenya)|-1.088693|35.871492": {
+   "osm": {
+    "buildings": 1480,
+    "tagged": 8,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 153,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 60,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Ninh Binh|20.242114|105.974621": {
+   "osm": {
+    "buildings": 7,
+    "tagged": 0,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 417,
+    "any": 395,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 56,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Near Ludhiana (farmland)|30.97|75.72": {
+   "osm": {
+    "buildings": 0,
+    "tagged": 0,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 0,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 51,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Central Iowa (farmland)|42.15|-93.45": {
+   "osm": {
+    "buildings": 0,
+    "tagged": 0,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 43,
+    "any": 43,
+    "capped": false
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 22,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 16,
+    "spacingM": 5,
+    "at": "2026-10-08"
+   }
+  },
+  "Can Tho|10.036205|105.787266": {
+   "osm": {
+    "buildings": 273,
+    "tagged": 8,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 414,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 59,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Thar Desert (empty stretch)|27|70.3": {
+   "osm": {
+    "buildings": 0,
+    "tagged": 0,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 0,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 53,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Merzouga (Sahara)|31.099917|-4.014088": {
+   "osm": {
+    "buildings": 186,
+    "tagged": 0,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 72,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 51,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "San Pedro de Atacama|-22.910832|-68.200138": {
+   "osm": {
+    "buildings": 549,
+    "tagged": 10,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 453,
+    "any": 476,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 55,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Spiti Valley (Kaza)|32.224384|78.072263": {
+   "osm": {
+    "buildings": 563,
+    "tagged": 0,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 58,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 51,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Zermatt|46.021208|7.749254": {
+   "osm": {
+    "buildings": 958,
+    "tagged": 28,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 440,
+    "any": 500,
+    "capped": true
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 21,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Cusco|-13.517089|-71.978536": {
+   "osm": {
+    "buildings": 1250,
+    "tagged": 28,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 994,
+    "any": 500,
+    "capped": true
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 58,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Namche Bazaar|27.804166|86.709796": {
+   "osm": {
+    "buildings": 338,
+    "tagged": 8,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 0,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 53,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Male (Maldives)|4.177988|73.510739": {
+   "osm": {
+    "buildings": 243,
+    "tagged": 25,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 360,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 60,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Honolulu|21.304547|-157.855676": {
+   "osm": {
+    "buildings": 225,
+    "tagged": 120,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 228,
+    "any": 433,
+    "capped": false
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 28,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 14,
+    "spacingM": 19,
+    "at": "2026-10-08"
+   }
+  },
+  "Fira (Santorini)|36.414923|25.432453": {
+   "osm": {
+    "buildings": 292,
+    "tagged": 12,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 475,
+    "any": 500,
+    "capped": true
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 48,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Manaus|-3.131633|-59.982504": {
+   "osm": {
+    "buildings": 42,
+    "tagged": 1,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 426,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 60,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Kuching|1.559756|110.345397": {
+   "osm": {
+    "buildings": 236,
+    "tagged": 12,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 38,
+    "any": 485,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 60,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Tromso|69.651635|18.955859": {
+   "osm": {
+    "buildings": 1365,
+    "tagged": 601,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 0,
+    "any": 478,
+    "capped": true
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 21,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Reykjavik|64.145981|-21.942237": {
+   "osm": {
+    "buildings": 1438,
+    "tagged": 247,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 170,
+    "any": 491,
+    "capped": true
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 26,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Sydney|-33.869844|151.208285": {
+   "osm": {
+    "buildings": 568,
+    "tagged": 439,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 1318,
+    "any": 2116,
+    "capped": true
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 25,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 15,
+    "spacingM": 10,
+    "at": "2026-10-08"
+   }
+  },
+  "Auckland|-36.852095|174.76318": {
+   "osm": {
+    "buildings": 658,
+    "tagged": 275,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 411,
+    "any": 392,
+    "capped": true
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 24,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 15,
+    "spacingM": 10,
+    "at": "2026-10-08"
+   }
+  },
+  "Tokyo|35.67686|139.763895": {
+   "osm": {
+    "buildings": 600,
+    "tagged": 92,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 1150,
+    "any": 1939,
+    "capped": true
+   },
+   "imagery": {
+    "level": 19,
+    "cmPerPixel": 24,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Nairobi|-1.289001|36.817281": {
+   "osm": {
+    "buildings": 385,
+    "tagged": 56,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 282,
+    "any": 437,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 60,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Lima|-12.045981|-77.030591": {
+   "osm": {
+    "buildings": 823,
+    "tagged": 368,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 554,
+    "any": 1054,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 58,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  },
+  "Istanbul|41.006381|28.975872": {
+   "osm": {
+    "buildings": 1887,
+    "tagged": 92,
+    "at": "2026-10-08"
+   },
+   "mly": {
+    "at": "2026-10-08",
+    "pano": 277,
+    "any": 248,
+    "capped": false
+   },
+   "imagery": {
+    "level": 18,
+    "cmPerPixel": 45,
+    "at": "2026-10-08"
+   },
+   "terrain": {
+    "level": 13,
+    "spacingM": 38,
+    "at": "2026-10-08"
+   }
+  }
+ }
+}

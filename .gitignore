@@ -1,0 +1,36 @@
+# secrets: tokens live only in .env files
+.env
+.env.*
+!.env.example
+# build and runtime
+node_modules/
+web/dist/
+web/public/cesium/
+logs/
+docs/shots/
+.venv/
+__pycache__/
+*.pyc
+# SQLite journals
+*.db-journal
+*.db-wal
+*.db-shm
+
+# reference reading supplied by the owner (third-party article text)
+*.docx
+
+# your own 360 photos for My photos (read in the browser only, never uploaded or committed)
+data/panoramas/
+
+# ArduPilot SITL binaries (downloaded by sim/start-sitl.ps1) and its runtime files
+sim/sitl-win/
+sim/run/
+sim/run-test/
+
+# Natural Earth populated places (public domain, downloaded by the coverage scripts)
+data/naturalearth/
+
+.vercel/
+
+# the clean export for the public repo (its own repository)
+public-release/

@@ -1,0 +1,198 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #0b0e14;
+  color: #e8ecf4;
+  font: 14px/1.4 system-ui, sans-serif;
+}
+
+#globe {
+  position: fixed;
+  inset: 0;
+}
+
+/* panels live inside #ui and switch pointer events back on; the globe stays draggable around them.
+   No blur or shadow effects on purpose: they cost GPU time on an integrated graphics laptop. */
+#ui {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.region {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 380px;
+}
+.tl { top: 12px; left: 12px; align-items: flex-start; }
+.tr {
+  top: 12px;
+  right: 12px;
+  align-items: flex-end;
+  max-height: calc(100% - var(--credits-h, 22px) - var(--br-h, 0px) - 36px);
+  overflow-y: auto;
+}
+.bl { bottom: calc(var(--credits-h, 22px) + 12px); left: 12px; }
+.br { bottom: calc(var(--credits-h, 22px) + 12px); right: 12px; align-items: flex-end; }
+
+.panel,
+.btn,
+.in,
+.credits {
+  pointer-events: auto;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(15, 18, 26, 0.88);
+  border: 1px solid #2b3347;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.btn {
+  font: inherit;
+  color: #e8ecf4;
+  background: rgba(30, 36, 50, 0.92);
+  border: 1px solid #3a4560;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.btn:hover { background: #2a3350; }
+.btn:disabled { opacity: 0.5; cursor: default; }
+.in {
+  font: inherit;
+  color: #e8ecf4;
+  background: #0f1320;
+  border: 1px solid #3a4560;
+  border-radius: 6px;
+  padding: 5px 8px;
+}
+.row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.between { justify-content: space-between; }
+.col { display: flex; flex-direction: column; gap: 4px; }
+.list { list-style: none; margin: 6px 0 0; padding: 0; max-height: 40vh; overflow: auto; }
+.list li { margin: 2px 0; }
+.list li > .btn { width: 100%; text-align: left; }
+.muted { color: #9aa6bd; font-size: 12px; margin: 4px 0 0; }
+.mono { font-variant-numeric: tabular-nums; }
+#search-panel .row .in { flex: 1; min-width: 200px; }
+
+.notices {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 380px;
+  max-width: 100%;
+}
+.notice {
+  pointer-events: auto;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(20, 24, 34, 0.94);
+  border-left: 4px solid #6aa9ff;
+}
+.notice.warn { border-color: #f0b429; }
+.notice.error { border-color: #ef5350; }
+
+.side { width: 300px; }
+.hidden { display: none !important; }
+
+/* Stand here: the orbit tools would fight the eye-level camera, so they give way to one Leave button */
+#stand-exit { display: none; }
+body.standing #stand-exit { display: inline-block; }
+body.standing #camera-tools { display: none; }
+#pano-result:empty { display: none; }
+#instruments { font-size: 12px; min-width: 300px; }
+#instruments .inst-row { display: flex; gap: 10px; align-items: center; }
+#instruments .inst-grid { display: grid; grid-template-columns: auto auto; gap: 2px 12px; font-variant-numeric: tabular-nums; }
+#instruments .warn { color: #f0b429; font-weight: 600; }
+.horizon { position: relative; width: 64px; height: 64px; border-radius: 50%; overflow: hidden; border: 1px solid #556; flex: none; }
+.horizon .hz-world { position: absolute; left: -50%; top: -50%; width: 200%; height: 200%; background: linear-gradient(#3d7bd9 50%, #8a5a2b 50%); }
+.horizon .hz-plane { position: absolute; left: 14px; right: 14px; top: 31px; height: 2px; background: #ffd400; }
+#flight-buttons { max-width: 330px; }
+#gamepad-panel { max-width: 330px; font-size: 12px; }
+#gamepad-panel .mono { font-size: 11px; word-break: break-all; }
+#crash-result { border: 1px solid #e5484d; max-width: 360px; font-size: 13px; }
+#crash-result b { color: #ff6b6b; }
+#flight-buttons .row.wrap { flex-wrap: wrap; gap: 4px; }
+#flight-buttons ul { margin: 6px 0 0; padding-left: 16px; font-size: 12px; color: #cfd6e4; }
+#bridge-debug { font-size: 12px; max-width: 320px; }
+#bridge-debug #bridge-status[data-state='connected'] { color: #6fcf97; }
+#bridge-debug #bridge-status[data-state='disconnected'] { color: #f0b429; }
+#bridge-debug pre { margin: 4px 0 0; max-height: 220px; overflow: auto; font-size: 11px; }
+#whatishere:empty { display: none; }
+#whatishere .wih { margin-top: 2px; }
+#whatishere .wih li { font-size: 12px; color: #cfd6e4; margin: 3px 0; }
+#whatishere .wih li[data-state='wait'] { color: #9aa6bd; }
+#whatishere .wih li[data-state='fail'] { color: #f0b429; }
+.places-group { margin-top: 8px !important; font-weight: 600; }
+
+/* the full-screen 360 view sits above the globe and its panels */
+.pano { position: fixed; inset: 0; z-index: 10; background: #000; }
+#pano-canvas { position: absolute; inset: 0; }
+.pano-bar { position: absolute; top: 12px; left: 12px; max-width: min(520px, calc(50% - 90px)); } /* clear of MapillaryJS's centred sequence controls */
+.pano-loading { position: absolute; top: 50%; width: 100%; text-align: center; color: #cfd6e4; }
+.mock-pano { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(#5b86b8, #a9c4de 49%, #6f6248 51%, #4a3f2c); }
+
+.credits {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 16px;
+  align-items: center;
+  padding: 3px 10px;
+  font-size: 11px;
+  color: #cfd6e4;
+  background: rgba(10, 12, 18, 0.78);
+}
+.credits a { color: #9ec3ff; }
+#cesium-credits { margin-left: auto; }
+#credits-inline { flex: 1 1 100%; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#credits-inline:empty { display: none; }
+/* Cesium positions its own credit strip absolutely; inside our bar it must flow with the other notices */
+#cesium-credits .cesium-widget-credits { position: static; display: flex; align-items: center; gap: 8px; padding: 0; }
+#cesium-credits img { height: 16px; width: auto; vertical-align: middle !important; }
+
+/* the places drawer: down the left edge under the search box, scrolls on its own */
+#places-drawer {
+  position: absolute;
+  top: 58px;
+  left: 12px;
+  bottom: calc(var(--credits-h, 22px) + 12px);
+  width: 320px;
+  max-width: calc(100% - 24px);
+  overflow-y: auto;
+  z-index: 2;
+}
+#places-drawer .list { max-height: none; overflow: visible; }
+#places-drawer .list li.row { flex-wrap: nowrap; }
+#places-drawer .list li > .btn { width: auto; white-space: nowrap; }
+#places-drawer .list li > .btn:first-child { flex: 1; white-space: normal; }
+
+/* the pre-flight checklist (P3.3.5): a dialog in the middle of the screen, above the corner panels */
+#preflight {
+  position: fixed;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(460px, calc(100% - 32px));
+  z-index: 5;
+}
+#preflight .pf-fail { color: #ff8a80; }
+#preflight .pf-warn { color: #ffd180; }
+
+/* the bottom-left column (Mission, Parameters) scrolls instead of growing past the top of the window */
+.bl {
+  max-height: calc(100% - var(--credits-h, 22px) - 36px);
+  overflow-y: auto;
+}
+#params-table { display: block; max-height: 30vh; overflow-y: auto; }

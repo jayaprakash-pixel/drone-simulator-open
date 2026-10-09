@@ -1,0 +1,215 @@
+{
+ "about": "P3.4 parameter profile: the only ArduPilot parameters the app reads, saves, loads, exports or sets (owner rule 2026-10-09: return height, speed limits, geofence, failsafe actions, flight modes). Names, meanings and ranges from https://ardupilot.org/copter/docs/parameters.html read 2026-10-09 (this SITL build: ArduCopter V4.7.2-beta1). Never: SIM_* (simulator only), frame or motor settings, sensor calibration, tuning (PID) or battery capacity (in this simulator it is shaped to make the drain rate). Used by bridge/contract.py and web/src/net/contract.ts.",
+ "params": [
+  {
+   "name": "RTL_ALT_M",
+   "title": "Return-home height above home",
+   "units": "m",
+   "min": 0.3,
+   "max": 3000
+  },
+  {
+   "name": "RTL_ALT_FINAL_M",
+   "title": "Final height at home (0 lands)",
+   "units": "m",
+   "min": 0,
+   "max": 10
+  },
+  {
+   "name": "RTL_SPEED_MS",
+   "title": "Return-home speed (0 uses WP_SPD)",
+   "units": "m/s",
+   "min": 0,
+   "max": 20
+  },
+  {
+   "name": "RTL_LOIT_TIME",
+   "title": "Hover over home before descending",
+   "units": "ms",
+   "min": 0,
+   "max": 60000
+  },
+  {
+   "name": "RTL_CLIMB_MIN_M",
+   "title": "Minimum climb when returning",
+   "units": "m",
+   "min": 0,
+   "max": 30
+  },
+  {
+   "name": "WP_SPD",
+   "title": "Mission horizontal speed",
+   "units": "m/s",
+   "min": 0.1,
+   "max": 20
+  },
+  {
+   "name": "WP_SPD_UP",
+   "title": "Mission climb speed",
+   "units": "m/s",
+   "min": 0.1,
+   "max": 10
+  },
+  {
+   "name": "WP_SPD_DN",
+   "title": "Mission descent speed",
+   "units": "m/s",
+   "min": 0.1,
+   "max": 10
+  },
+  {
+   "name": "LOIT_SPEED_MS",
+   "title": "Loiter maximum speed",
+   "units": "m/s",
+   "min": 0.2,
+   "max": 35
+  },
+  {
+   "name": "PILOT_SPD_UP",
+   "title": "Pilot maximum climb speed",
+   "units": "m/s",
+   "min": 0.5,
+   "max": 5
+  },
+  {
+   "name": "PILOT_SPD_DN",
+   "title": "Pilot maximum descent speed (0 uses PILOT_SPD_UP)",
+   "units": "m/s",
+   "min": 0,
+   "max": 5
+  },
+  {
+   "name": "LAND_SPD_MS",
+   "title": "Final landing speed",
+   "units": "m/s",
+   "min": 0.3,
+   "max": 2
+  },
+  {
+   "name": "FENCE_ENABLE",
+   "title": "Geofence on (1) or off (0)",
+   "units": "",
+   "min": 0,
+   "max": 1
+  },
+  {
+   "name": "FENCE_TYPE",
+   "title": "Geofence types (bitmask: 1 max height, 2 circle, 4 polygons, 8 min height)",
+   "units": "",
+   "min": 0,
+   "max": 15
+  },
+  {
+   "name": "FENCE_ALT_MAX",
+   "title": "Geofence maximum height",
+   "units": "m",
+   "min": 10,
+   "max": 1000
+  },
+  {
+   "name": "FENCE_RADIUS",
+   "title": "Geofence circle radius around home",
+   "units": "m",
+   "min": 30,
+   "max": 10000
+  },
+  {
+   "name": "FENCE_ACTION",
+   "title": "Geofence breach action (0 report, 1 RTL or land, 2 land, 3-5 SmartRTL or brake variants)",
+   "units": "",
+   "min": 0,
+   "max": 5
+  },
+  {
+   "name": "FENCE_MARGIN",
+   "title": "Distance to keep from the fence",
+   "units": "m",
+   "min": 1,
+   "max": 10
+  },
+  {
+   "name": "FS_GCS_ENABLE",
+   "title": "Ground station lost: action (0 none, 1 RTL, 3 SmartRTL, 4, 5 land, 6, 7)",
+   "units": "",
+   "min": 0,
+   "max": 7
+  },
+  {
+   "name": "FS_THR_ENABLE",
+   "title": "Radio throttle lost: action (0 off, 1 RTL, 3 land, 4-7)",
+   "units": "",
+   "min": 0,
+   "max": 7
+  },
+  {
+   "name": "FS_EKF_ACTION",
+   "title": "Position estimate lost: action (0 report, 1 land, 2 AltHold, 3 land always)",
+   "units": "",
+   "min": 0,
+   "max": 3
+  },
+  {
+   "name": "BATT_FS_LOW_ACT",
+   "title": "Low battery action (0 warn, 1 land, 2 RTL, 3-7)",
+   "units": "",
+   "min": 0,
+   "max": 7
+  },
+  {
+   "name": "BATT_FS_CRT_ACT",
+   "title": "Critical battery action (0 warn, 1 land, 2 RTL, 3-7)",
+   "units": "",
+   "min": 0,
+   "max": 7
+  },
+  {
+   "name": "FLTMODE1",
+   "title": "Flight mode 1 (switch position)",
+   "units": "",
+   "min": 0,
+   "max": 28
+  },
+  {
+   "name": "FLTMODE2",
+   "title": "Flight mode 2",
+   "units": "",
+   "min": 0,
+   "max": 28
+  },
+  {
+   "name": "FLTMODE3",
+   "title": "Flight mode 3",
+   "units": "",
+   "min": 0,
+   "max": 28
+  },
+  {
+   "name": "FLTMODE4",
+   "title": "Flight mode 4",
+   "units": "",
+   "min": 0,
+   "max": 28
+  },
+  {
+   "name": "FLTMODE5",
+   "title": "Flight mode 5",
+   "units": "",
+   "min": 0,
+   "max": 28
+  },
+  {
+   "name": "FLTMODE6",
+   "title": "Flight mode 6",
+   "units": "",
+   "min": 0,
+   "max": 28
+  },
+  {
+   "name": "FLTMODE_CH",
+   "title": "Radio channel for flight modes (0 off, 5-15)",
+   "units": "",
+   "min": 0,
+   "max": 15
+  }
+ ]
+}

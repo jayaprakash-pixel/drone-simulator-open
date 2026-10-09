@@ -1,0 +1,47 @@
+{
+ "about": "Phase 1 test places (P1.6.3): samples to measure data quality, never a limit on where the app works (decisions.md 2026-10-09).",
+ "places": [
+  {
+   "name": "Jaipur (large city)",
+   "lat": 26.9124,
+   "lon": 75.7873,
+   "height": 1000
+  },
+  {
+   "name": "Jaisalmer (desert town)",
+   "lat": 26.9157,
+   "lon": 70.9083,
+   "height": 1000
+  },
+  {
+   "name": "Mount Abu (hills)",
+   "lat": 24.5926,
+   "lon": 72.7156,
+   "height": 1000
+  },
+  {
+   "name": "Pushkar (small town, lake)",
+   "lat": 26.4897,
+   "lon": 74.5511,
+   "height": 1000
+  },
+  {
+   "name": "Thar Desert (empty stretch)",
+   "lat": 27.0,
+   "lon": 70.3,
+   "height": 1000
+  },
+  {
+   "name": "Spiti Valley (Himalaya)",
+   "lat": 32.2276,
+   "lon": 78.0719,
+   "height": 1000
+  },
+  {
+   "name": "Tokyo (dense city)",
+   "lat": 35.6762,
+   "lon": 139.6503,
+   "height": 1000
+  }
+ ]
+}

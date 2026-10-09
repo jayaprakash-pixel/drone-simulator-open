@@ -1,0 +1,983 @@
+{
+ "_about": "Shared fixtures for the browser-bridge contract (plan p.6). Checked by web/src/net/contract.test.ts and bridge/tests/test_contract.py; both must agree on every case.",
+ "controlInput": {
+  "valid": [
+   {
+    "throttle": 0.5,
+    "yaw": 0,
+    "pitch": 0,
+    "roll": 0
+   },
+   {
+    "throttle": 0,
+    "yaw": -1,
+    "pitch": 1,
+    "roll": -1,
+    "mode": "loiter",
+    "arm": true
+   },
+   {
+    "throttle": 1,
+    "yaw": 1,
+    "pitch": -1,
+    "roll": 1,
+    "mode": "rtl",
+    "arm": false
+   },
+   {
+    "throttle": 0.25,
+    "yaw": 0.1,
+    "pitch": -0.3,
+    "roll": 0.2,
+    "mode": "altHold"
+   }
+  ],
+  "invalid": [
+   {
+    "why": "throttle 1.2 is above 1",
+    "value": {
+     "throttle": 1.2,
+     "yaw": 0,
+     "pitch": 0,
+     "roll": 0
+    }
+   },
+   {
+    "why": "yaw -1.1 is below -1",
+    "value": {
+     "throttle": 0.5,
+     "yaw": -1.1,
+     "pitch": 0,
+     "roll": 0
+    }
+   },
+   {
+    "why": "throttle below 0",
+    "value": {
+     "throttle": -0.01,
+     "yaw": 0,
+     "pitch": 0,
+     "roll": 0
+    }
+   },
+   {
+    "why": "roll missing",
+    "value": {
+     "throttle": 0.5,
+     "yaw": 0,
+     "pitch": 0
+    }
+   },
+   {
+    "why": "pitch is a string",
+    "value": {
+     "throttle": 0.5,
+     "yaw": 0,
+     "pitch": "0",
+     "roll": 0
+    }
+   },
+   {
+    "why": "unknown mode",
+    "value": {
+     "throttle": 0.5,
+     "yaw": 0,
+     "pitch": 0,
+     "roll": 0,
+     "mode": "acro"
+    }
+   },
+   {
+    "why": "arm is not a boolean",
+    "value": {
+     "throttle": 0.5,
+     "yaw": 0,
+     "pitch": 0,
+     "roll": 0,
+     "arm": 1
+    }
+   },
+   {
+    "why": "unknown field",
+    "value": {
+     "throttle": 0.5,
+     "yaw": 0,
+     "pitch": 0,
+     "roll": 0,
+     "boost": 1
+    }
+   }
+  ]
+ },
+ "droneState": {
+  "valid": [
+   {
+    "t": "2026-10-08T10:00:00.000Z",
+    "lat": 26.4897,
+    "lon": 74.5511,
+    "altMsl": 512.3,
+    "altAgl": 10.2,
+    "headingDeg": 90,
+    "pitchDeg": -2.5,
+    "rollDeg": 1.2,
+    "groundSpeed": 3.1,
+    "verticalSpeed": -0.4,
+    "batteryPct": 87,
+    "mode": "LOITER",
+    "armed": true,
+    "gpsFix": 3
+   },
+   {
+    "t": "2026-10-08T10:00:00Z",
+    "lat": -33.8688,
+    "lon": 151.2093,
+    "altMsl": 0,
+    "altAgl": 0,
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0,
+    "groundSpeed": 0,
+    "verticalSpeed": 0,
+    "batteryPct": 100,
+    "mode": "STABILIZE",
+    "armed": false,
+    "gpsFix": 0
+   },
+   {
+    "t": "2026-10-08T10:00:00.000Z",
+    "lat": 26.4897,
+    "lon": 74.5511,
+    "altMsl": 512.3,
+    "altAgl": 10.2,
+    "headingDeg": 90,
+    "pitchDeg": -2.5,
+    "rollDeg": 1.2,
+    "groundSpeed": 3.1,
+    "verticalSpeed": -0.4,
+    "batteryPct": 87,
+    "mode": "AUTO",
+    "armed": true,
+    "gpsFix": 3,
+    "wp": 2,
+    "wpCount": 5
+   }
+  ],
+  "invalid": [
+   {
+    "why": "lat 95 is beyond the pole",
+    "value": {
+     "t": "2026-10-08T10:00:00Z",
+     "lat": 95,
+     "lon": 74.5,
+     "altMsl": 500,
+     "altAgl": 0,
+     "headingDeg": 0,
+     "pitchDeg": 0,
+     "rollDeg": 0,
+     "groundSpeed": 0,
+     "verticalSpeed": 0,
+     "batteryPct": 100,
+     "mode": "STABILIZE",
+     "armed": false,
+     "gpsFix": 3
+    }
+   },
+   {
+    "why": "lon 181",
+    "value": {
+     "t": "2026-10-08T10:00:00Z",
+     "lat": 26,
+     "lon": 181,
+     "altMsl": 500,
+     "altAgl": 0,
+     "headingDeg": 0,
+     "pitchDeg": 0,
+     "rollDeg": 0,
+     "groundSpeed": 0,
+     "verticalSpeed": 0,
+     "batteryPct": 100,
+     "mode": "STABILIZE",
+     "armed": false,
+     "gpsFix": 3
+    }
+   },
+   {
+    "why": "t is not ISO 8601 UTC",
+    "value": {
+     "t": "yesterday",
+     "lat": 26,
+     "lon": 74.5,
+     "altMsl": 500,
+     "altAgl": 0,
+     "headingDeg": 0,
+     "pitchDeg": 0,
+     "rollDeg": 0,
+     "groundSpeed": 0,
+     "verticalSpeed": 0,
+     "batteryPct": 100,
+     "mode": "STABILIZE",
+     "armed": false,
+     "gpsFix": 3
+    }
+   },
+   {
+    "why": "batteryPct 120",
+    "value": {
+     "t": "2026-10-08T10:00:00Z",
+     "lat": 26,
+     "lon": 74.5,
+     "altMsl": 500,
+     "altAgl": 0,
+     "headingDeg": 0,
+     "pitchDeg": 0,
+     "rollDeg": 0,
+     "groundSpeed": 0,
+     "verticalSpeed": 0,
+     "batteryPct": 120,
+     "mode": "STABILIZE",
+     "armed": false,
+     "gpsFix": 3
+    }
+   },
+   {
+    "why": "gpsFix 2.5 is not a whole number",
+    "value": {
+     "t": "2026-10-08T10:00:00Z",
+     "lat": 26,
+     "lon": 74.5,
+     "altMsl": 500,
+     "altAgl": 0,
+     "headingDeg": 0,
+     "pitchDeg": 0,
+     "rollDeg": 0,
+     "groundSpeed": 0,
+     "verticalSpeed": 0,
+     "batteryPct": 100,
+     "mode": "STABILIZE",
+     "armed": false,
+     "gpsFix": 2.5
+    }
+   },
+   {
+    "why": "armed missing",
+    "value": {
+     "t": "2026-10-08T10:00:00Z",
+     "lat": 26,
+     "lon": 74.5,
+     "altMsl": 500,
+     "altAgl": 0,
+     "headingDeg": 0,
+     "pitchDeg": 0,
+     "rollDeg": 0,
+     "groundSpeed": 0,
+     "verticalSpeed": 0,
+     "batteryPct": 100,
+     "mode": "STABILIZE",
+     "gpsFix": 3
+    }
+   },
+   {
+    "why": "extra field speed",
+    "value": {
+     "t": "2026-10-08T10:00:00Z",
+     "lat": 26,
+     "lon": 74.5,
+     "altMsl": 500,
+     "altAgl": 0,
+     "headingDeg": 0,
+     "pitchDeg": 0,
+     "rollDeg": 0,
+     "groundSpeed": 0,
+     "verticalSpeed": 0,
+     "batteryPct": 100,
+     "mode": "STABILIZE",
+     "armed": false,
+     "gpsFix": 3,
+     "speed": 1
+    }
+   },
+   {
+    "why": "altMsl is NaN (sent as null in JSON)",
+    "value": {
+     "t": "2026-10-08T10:00:00Z",
+     "lat": 26,
+     "lon": 74.5,
+     "altMsl": null,
+     "altAgl": 0,
+     "headingDeg": 0,
+     "pitchDeg": 0,
+     "rollDeg": 0,
+     "groundSpeed": 0,
+     "verticalSpeed": 0,
+     "batteryPct": 100,
+     "mode": "STABILIZE",
+     "armed": false,
+     "gpsFix": 3
+    }
+   },
+   {
+    "why": "wp is negative",
+    "value": {
+     "t": "2026-10-08T10:00:00.000Z",
+     "lat": 26.4897,
+     "lon": 74.5511,
+     "altMsl": 512.3,
+     "altAgl": 10.2,
+     "headingDeg": 90,
+     "pitchDeg": -2.5,
+     "rollDeg": 1.2,
+     "groundSpeed": 3.1,
+     "verticalSpeed": -0.4,
+     "batteryPct": 87,
+     "mode": "LOITER",
+     "armed": true,
+     "gpsFix": 3,
+     "wp": -1,
+     "wpCount": 5
+    }
+   }
+  ]
+ },
+ "droneStateFields": [
+  "t",
+  "lat",
+  "lon",
+  "altMsl",
+  "altAgl",
+  "headingDeg",
+  "pitchDeg",
+  "rollDeg",
+  "groundSpeed",
+  "verticalSpeed",
+  "batteryPct",
+  "mode",
+  "armed",
+  "gpsFix",
+  "wp",
+  "wpCount"
+ ],
+ "command": {
+  "valid": [
+   {
+    "type": "command",
+    "id": 1,
+    "command": "arm"
+   },
+   {
+    "type": "command",
+    "id": 2,
+    "command": "takeoff",
+    "alt": 10
+   },
+   {
+    "type": "command",
+    "id": 3,
+    "command": "mode",
+    "mode": "loiter"
+   },
+   {
+    "type": "command",
+    "id": 4,
+    "command": "land"
+   },
+   {
+    "type": "command",
+    "id": 11,
+    "command": "place",
+    "lat": 26.4897,
+    "lon": 74.5511,
+    "altMsl": 502.8,
+    "heading": 90
+   },
+   {
+    "type": "command",
+    "id": 20,
+    "command": "wind",
+    "preset": "strong"
+   },
+   {
+    "type": "command",
+    "id": 21,
+    "command": "gps",
+    "quality": "dropout"
+   },
+   {
+    "type": "command",
+    "id": 22,
+    "command": "battery",
+    "startPct": 30,
+    "drainPctPerMin": 10
+   },
+   {
+    "type": "command",
+    "id": 40,
+    "command": "mission",
+    "waypoints": [
+     {
+      "lat": 26.49,
+      "lon": 74.55,
+      "alt": 30,
+      "speed": 5
+     },
+     {
+      "lat": 26.491,
+      "lon": 74.55,
+      "alt": 30,
+      "speed": 5
+     },
+     {
+      "lat": 26.492,
+      "lon": 74.55,
+      "alt": 50,
+      "speed": 8
+     }
+    ]
+   },
+   {
+    "type": "command",
+    "id": 41,
+    "command": "fence",
+    "altMax": 120,
+    "radius": 100,
+    "breach": "rtl"
+   },
+   {
+    "type": "command",
+    "id": 42,
+    "command": "mode",
+    "mode": "auto"
+   },
+   {
+    "type": "command",
+    "id": 50,
+    "command": "params"
+   },
+   {
+    "type": "command",
+    "id": 51,
+    "command": "params",
+    "values": {
+     "RTL_ALT_M": 30,
+     "WP_SPD": 8,
+     "FENCE_ACTION": 1
+    }
+   }
+  ],
+  "invalid": [
+   {
+    "why": "takeoff without alt",
+    "value": {
+     "type": "command",
+     "id": 5,
+     "command": "takeoff"
+    }
+   },
+   {
+    "why": "alt 150 above 100",
+    "value": {
+     "type": "command",
+     "id": 6,
+     "command": "takeoff",
+     "alt": 150
+    }
+   },
+   {
+    "why": "mode without a mode",
+    "value": {
+     "type": "command",
+     "id": 7,
+     "command": "mode"
+    }
+   },
+   {
+    "why": "mode on arm",
+    "value": {
+     "type": "command",
+     "id": 8,
+     "command": "arm",
+     "mode": "loiter"
+    }
+   },
+   {
+    "why": "unknown command flip",
+    "value": {
+     "type": "command",
+     "id": 9,
+     "command": "flip"
+    }
+   },
+   {
+    "why": "unknown mode acro",
+    "value": {
+     "type": "command",
+     "id": 10,
+     "command": "mode",
+     "mode": "acro"
+    }
+   },
+   {
+    "why": "negative id",
+    "value": {
+     "type": "command",
+     "id": -1,
+     "command": "arm"
+    }
+   },
+   {
+    "why": "place without heading",
+    "value": {
+     "type": "command",
+     "id": 12,
+     "command": "place",
+     "lat": 26.4897,
+     "lon": 74.5511,
+     "altMsl": 502.8
+    }
+   },
+   {
+    "why": "place with lat 95",
+    "value": {
+     "type": "command",
+     "id": 13,
+     "command": "place",
+     "lat": 95,
+     "lon": 74.5511,
+     "altMsl": 502.8,
+     "heading": 0
+    }
+   },
+   {
+    "why": "lat on arm",
+    "value": {
+     "type": "command",
+     "id": 14,
+     "command": "arm",
+     "lat": 26.4897
+    }
+   },
+   {
+    "why": "unknown wind preset",
+    "value": {
+     "type": "command",
+     "id": 23,
+     "command": "wind",
+     "preset": "storm"
+    }
+   },
+   {
+    "why": "battery without a drain rate",
+    "value": {
+     "type": "command",
+     "id": 24,
+     "command": "battery",
+     "startPct": 30
+    }
+   },
+   {
+    "why": "quality on wind",
+    "value": {
+     "type": "command",
+     "id": 25,
+     "command": "wind",
+     "preset": "calm",
+     "quality": "good"
+    }
+   },
+   {
+    "why": "mission with no waypoints",
+    "value": {
+     "type": "command",
+     "id": 43,
+     "command": "mission",
+     "waypoints": []
+    }
+   },
+   {
+    "why": "waypoint height above 120 m",
+    "value": {
+     "type": "command",
+     "id": 44,
+     "command": "mission",
+     "waypoints": [
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 150,
+       "speed": 5
+      }
+     ]
+    }
+   },
+   {
+    "why": "waypoint with an unknown field",
+    "value": {
+     "type": "command",
+     "id": 45,
+     "command": "mission",
+     "waypoints": [
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5,
+       "hold": 3
+      }
+     ]
+    }
+   },
+   {
+    "why": "31 waypoints (at most 30)",
+    "value": {
+     "type": "command",
+     "id": 46,
+     "command": "mission",
+     "waypoints": [
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      },
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      }
+     ]
+    }
+   },
+   {
+    "why": "fence radius below 30 m",
+    "value": {
+     "type": "command",
+     "id": 47,
+     "command": "fence",
+     "altMax": 120,
+     "radius": 20,
+     "breach": "rtl"
+    }
+   },
+   {
+    "why": "fence without a breach action",
+    "value": {
+     "type": "command",
+     "id": 48,
+     "command": "fence",
+     "altMax": 120,
+     "radius": 100
+    }
+   },
+   {
+    "why": "waypoints on another command",
+    "value": {
+     "type": "command",
+     "id": 49,
+     "command": "arm",
+     "waypoints": [
+      {
+       "lat": 26.49,
+       "lon": 74.55,
+       "alt": 30,
+       "speed": 5
+      }
+     ]
+    }
+   },
+   {
+    "why": "SIM_ parameter is not on the whitelist",
+    "value": {
+     "type": "command",
+     "id": 52,
+     "command": "params",
+     "values": {
+      "SIM_WIND_SPD": 5
+     }
+    }
+   },
+   {
+    "why": "tuning (PID) parameter is not on the whitelist",
+    "value": {
+     "type": "command",
+     "id": 53,
+     "command": "params",
+     "values": {
+      "ATC_RAT_RLL_P": 0.1
+     }
+    }
+   },
+   {
+    "why": "RTL_ALT_M above its documented range",
+    "value": {
+     "type": "command",
+     "id": 54,
+     "command": "params",
+     "values": {
+      "RTL_ALT_M": 5000
+     }
+    }
+   },
+   {
+    "why": "values on another command",
+    "value": {
+     "type": "command",
+     "id": 55,
+     "command": "arm",
+     "values": {
+      "WP_SPD": 5
+     }
+    }
+   }
+  ]
+ },
+ "ack": {
+  "valid": [
+   {
+    "type": "ack",
+    "id": 1,
+    "ok": true,
+    "reason": ""
+   },
+   {
+    "type": "ack",
+    "id": 2,
+    "ok": false,
+    "reason": "PreArm: Need Position Estimate"
+   },
+   {
+    "type": "ack",
+    "id": 51,
+    "ok": true,
+    "reason": "",
+    "values": {
+     "RTL_ALT_M": 15,
+     "WP_SPD": 5
+    }
+   }
+  ],
+  "invalid": [
+   {
+    "why": "ok missing",
+    "value": {
+     "type": "ack",
+     "id": 1,
+     "reason": ""
+    }
+   },
+   {
+    "why": "reason not text",
+    "value": {
+     "type": "ack",
+     "id": 1,
+     "ok": false,
+     "reason": 4
+    }
+   },
+   {
+    "why": "ack values with a parameter off the whitelist",
+    "value": {
+     "type": "ack",
+     "id": 51,
+     "ok": true,
+     "reason": "",
+     "values": {
+      "SIM_BATT_VOLTAGE": 12.6
+     }
+    }
+   }
+  ]
+ },
+ "progress": {
+  "valid": [
+   {
+    "type": "progress",
+    "id": 11,
+    "text": "Starting simulator"
+   }
+  ],
+  "invalid": [
+   {
+    "why": "empty text",
+    "value": {
+     "type": "progress",
+     "id": 11,
+     "text": ""
+    }
+   }
+  ]
+ }
+}

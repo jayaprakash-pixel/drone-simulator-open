@@ -1,0 +1,12 @@
+# Our own minimal SITL defaults (not ArduPilot's copter.parm, which is not downloaded; decisions.md 2026-10-09).
+# Without these, arming fails: "PreArm: Motors: Check frame class and type". ardupilot.org/copter/docs/parameters.html
+FRAME_CLASS 1
+FRAME_TYPE 0
+# battery: without a monitor SITL reports battery_remaining -1 (unknown); 4 = analog voltage and current (parameters.html)
+BATT_MONITOR 4
+# if the bridge dies (no ground-station HEARTBEAT for 2 s): RTL (P2A.7.7). 1 = RTL; 2 s is the shortest timeout (parameters.html)
+FS_GCS_ENABLE 1
+FS_GCS_TIMEOUT 2
+# without this, ArduCopter answers a GCS failsafe in AltHold/Loiter with "Continuing Pilot Control" and then sinks when the
+# RC override times out (measured 2026-10-09); 8 = bit 3 only: continue if already landing, otherwise RTL (parameters.html)
+FS_OPTIONS 8
